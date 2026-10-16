@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La papupagina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+
+  <!-- Filtro que "tiembla" los bordes para que parezcan dibujados a mano -->
+  <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
+    <filter id="tinta" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="ruido"/>
+      <feDisplacementMap in="SourceGraphic" in2="ruido" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+
+  <button id="tema" class="tecla" type="button" aria-label="Cambiar entre modo claro y oscuro" title="Cambiar modo">
+    <svg class="icono icono-sol" viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="4.2"/>
+      <path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1"/>
+    </svg>
+    <svg class="icono icono-luna" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>
+    </svg>
+  </button>
+
+  <main>
+    <h1 class="titulo">
+      <span class="titulo-texto">La papupagina</span>
+    </h1>
+  </main>
+
+</body>
+</html>
